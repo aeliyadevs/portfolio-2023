@@ -164,6 +164,9 @@ nav button {
     #nav-menu ul li {
         padding: 15px 0;
     }
+    #nav-menu ul li a {
+        display: flex;
+    }
     #nav-menu ul li i {
         display: block;
     }
@@ -196,7 +199,17 @@ nav button {
     font-variant: small-caps;
     color: var(--light);
 }
+@media screen and (max-width: 768px) {
+    #banner span {
+        font-size: 4.5rem;
+    }
+    #banner .title {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+}
 
+/* About Styles */
 #about {
     height: 100vh;
     width: 100%;
@@ -227,12 +240,19 @@ nav button {
     position: absolute;
     bottom: -80px;
 }
-#mail {
+
+#about .character {
+    width: 100%;
+}
+#about .character img {
+    width: 100%;
+}
+#about #mail {
     position: absolute;
     right: 35px;
     writing-mode: vertical-lr;
 }
-#mail::before {
+#about #mail::before {
     content: '';
     width: 1px;
     height: 100px;
@@ -241,7 +261,7 @@ nav button {
     top: -100px;
     left: 10px;
 }
-#mail::after {
+#about #mail::after {
     content: '';
     width: 1px;
     height: 100px;
@@ -263,39 +283,41 @@ nav button {
 #about a i:hover {
     transform: translateX(10px);
 }
-
-/* Call To Action Styles */
-#schedule-meeting {
-    position: relative;
-    margin-top: -100px;
-    padding-bottom: 85px;
-
-}
-#schedule-meeting span {
-    font-family: 'Ephesis', cursive;
-    font-size: 2.5rem;
-    color: #ffffff; 
-}
-#schedule-meeting p {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1892d8;
-    text-transform: capitalize;
-    font-variant: small-caps;
-}
-#schedule-meeting .skewed-div-1, #schedule-meeting .skewed-div-2 {
-    height: 55vh;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-}
-#schedule-meeting .skewed-div-1 {
-    transform: skewY(8deg);
-    background: #49a4f8;
-}
-#schedule-meeting .skewed-div-2 {
-    transform: skewY(-8deg);
-    background: #0c3c7c;
+@media screen and (max-width: 768px) {
+    #about {
+        position: relative;
+    }
+    #about #mail {
+        top: 75px;
+    }
+    #about #mail::before {
+        height: 55px;
+        top: -55px;
+    }
+    #about #mail::after {
+        height: 55px;
+    }
+    #about #socials {
+        top: 60px;
+    }
+    #about #socials::before {
+        height: 40px;
+        top: -40px;
+    }
+    #about #socials::after {
+        height: 40px;
+        bottom: -40px;
+    }
+    #about .character {
+        display: flex;
+        justify-content: center;
+    }
+    #about .character img {
+        width: 60%;
+    }
+    #about h2 {
+        font-size: 3rem;
+    }
 }
 
 /* Portfolio Styles */
@@ -306,6 +328,7 @@ nav button {
 }
 #portfolio h2 {
     font-size: 5rem;
+    text-align: center;
     text-shadow: 5px 5px 0px var(--secondary);
     animation: shadow linear 2s;
     margin-bottom: 50px;
@@ -315,6 +338,7 @@ nav button {
     top: 0;
     height: 100vh;
     padding-bottom: 50px;
+    padding-left: 3rem;
 }
 #portfolio .details span {
     font-size: 10rem;
@@ -351,9 +375,54 @@ nav button {
     font-size: 1.2rem;
     font-weight: 600;
 }
-
 #portfolio img {
     margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+    #portfolio h2 {
+        font-size: 3rem;
+        text-align: left;
+    }
+    #portfolio .details {
+        padding-left: 0;
+    }
+    #portfolio .details .tags {
+        overflow-x: scroll;
+    }
+}
+
+/* Call To Action Styles */
+#schedule-meeting {
+    position: relative;
+    margin-top: -100px;
+    padding-bottom: 85px;
+
+}
+#schedule-meeting span {
+    font-family: 'Ephesis', cursive;
+    font-size: 2.5rem;
+    color: #ffffff; 
+}
+#schedule-meeting p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1892d8;
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+#schedule-meeting .skewed-div-1, #schedule-meeting .skewed-div-2 {
+    height: 55vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+#schedule-meeting .skewed-div-1 {
+    transform: skewY(8deg);
+    background: #49a4f8;
+}
+#schedule-meeting .skewed-div-2 {
+    transform: skewY(-8deg);
+    background: #0c3c7c;
 }
 
 /* Contact Style */
@@ -387,4 +456,13 @@ nav ul {
 }
 nav ul li {
     margin-left: 30px;
+}
+@media screen and (max-width: 768px) {
+    footer nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer nav ul li {
+        margin: 0;
+    }
 }
