@@ -403,6 +403,9 @@ nav button {
     #portfolio .details .tags {
         overflow-x: scroll;
     }
+    #portfolio .portfolio-item .project-num {
+        display: none;
+    }
 }
 
 /* Call To Action Styles */
