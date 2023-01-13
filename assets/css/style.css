@@ -339,7 +339,7 @@ nav button {
 }
 #portfolio h2 {
     font-size: 5rem;
-    /* text-align: center; */
+    text-align: center;
     text-shadow: 5px 5px 0px var(--secondary);
     animation: shadow linear 2s;
     margin-bottom: 50px;
